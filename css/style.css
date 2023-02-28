@@ -510,7 +510,7 @@ html {
   align-items: center;
   width: 40px;
   height: 40px;
-  border: 1px solid #883260;
+  border: 3px solid #6E6BFF;
   border-radius: 100px;
   margin-right: 17px;
 }
@@ -519,6 +519,14 @@ html {
 }
 .icons__item i {
   font-size: 21px;
+}
+
+.icons_item-link {
+  color: #883260;
+  text-decoration: none;
+}
+.icons_item-link:hover {
+  color: #FF8B66;
 }
 
 .title {
@@ -952,7 +960,7 @@ span {
     min-height: 181px;
   }
   .footer__container img {
-    height: 210px;
+    height: 211px;
   }
   .footer__container .footer__img {
     left: -130px;
