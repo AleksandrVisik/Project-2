@@ -67,8 +67,6 @@ $color-red:#883260
         a 
             text-decoration: none
             color: black
-
-
 .left-wrapper
     position: relative
     img 
@@ -135,12 +133,14 @@ $color-red:#883260
             margin-right: 0px
         i
             font-size: 21px
+        
 
 .icons_item-link
     color: $color-red
     text-decoration: none
     &:hover
         color: $color-orange
+        transition: 1s 
 .title
     font-size: 72px
     position: relative
@@ -474,21 +474,278 @@ span
         .footer__img 
             left: -130px
 
-
-
-       
-
-    
-    
-
 // Смартфон горизонтальная ориентаия
 @media (max-width: 767px)
     .container
         width: 540px
+    .nav-menu
+        position: fixed
+        top: 0
+        right: -100%
+        height: 100vh
+        width: 40%
+        background: linear-gradient(143.92deg, #ED7B50 14.85%, #488AEA 53.25%, #2C2C2C 85.74%)
+        opacity: 0.96
+        z-index: 20
+        transition: 1s all
+        &__list
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            height: 100%
+        &__list-item
+            margin-right: 0
+            font-size: 20px
+    .hamburger
+        width: 30px
+        position: absolute
+        top: 20px
+        right: 30px
+        height: 20px
+        z-index: 30
+        span
+            height: 2px
+            width: 80%
+            display: block
+            background: black
+            opacity: 0.9
+            margin-bottom: 4px
+            transition: 1s all
+            &:last-child
+                margin-bottom: 0px
+    .hamburger__active
+        span
+            margin-bottom: -2px
+            &:nth-child(1)
+                transform: translateY(3px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(3px) rotate(45deg)
+    .nav-menu_active
+        display: block
+        right: 0
+    .main-section
+        min-height: 287px
+        &__nav-container
+            height: 30px
+        &__first-elipse
+            right: 30px
+            top: 5px
+        &__second-elipse 
+            right: -41px
+            top: 230px
+    .left-wrapper 
+        img 
+            width: 300px
+        &__rectangle-blue
+            width: 180px
+            height: 60px
+            top: 56px
+            left: -20px
+        &__rectangle-orange
+            width: 180px
+            height: 60px
+            top: 70px
+            left: 5px
+        &__rectangle-red
+            width: 180px
+            height: 60px
+            top: 100px
+            left: 18px
+    .right-wrapper
+        right: -70px
+        top: 0
+        &__text
+            font-size: 12px
+            margin-bottom: 15px
+        &__icons-box
+            margin-bottom: 15px
+    .icons__item
+        width: 25px
+        height: 25px
+        margin-right: 10px
+    .title
+        font-size: 32px
+    .buttons__main-btn
+        font-size: 12px
+        width: 140px
+        height: 40px
+    .buttons__text 
+        font-size: 12px
+    .buttons__icon-btn 
+        img
+            width: 30px
+            margin-right: 8px
+    .elipse
+        width: 90px
+        height: 90px
+    .elipse__subtract
+        width: 60px
+        height: 60px
+    .second-section
+        min-height: 290px
+
+        &__card-box 
+            padding-top: 20px
+        img
+            height: 120px
+        &__card-item
+            width: 150px
+            height: 150px
+            border-radius: 12px
+        &__text-block
+            width: 150px
+            top: 59px
+        &__text
+            font-size: 16px
+        &__icons-box 
+            padding-top: 10px
+            height: 60px
+        &__first-elipse
+            top: 190px
+    .icons_text
+        font-size: 10px
+        span
+            font-size: 20px
+    .icons_img
+        width: 40px
+    .third-section
+        min-height: 360px
+        &__text 
+            font-size: 12px
+            margin-bottom: 15px
+        &__right-wrapper
+            max-width: 280px
+        &__right-title 
+            margin-bottom: 10px
+        &__figure
+            width: 120px
+            height: 120px
+            top: 130px
+        &__second-elipse
+            top: 230px
+            right: 0
+        &__first-elipse
+            top: 105px
+            left: 105px
+    .footer__container 
+        min-height: 130px
+        img
+            height: 160px
+        .footer__img 
+            left: -130px
+    .footer__title
+        margin-bottom: 10px
 // сиартфон вертикальная ориентация
 @media (max-width: 575px)
     .container
         width: 100%
+    .hamburger
+        right: 10px
+    .main-section__content-container
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+
+    .main-section
+        min-height: 485px
+    .main-section__nav-container
+        height: 50px
+    .left-wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 320px
+        top: 182px
+        right: auto
+    .right-wrapper 
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        width: 320px
+        right: auto
+
+    .second-section
+        img
+            height: 170px
+        min-height: 820px
+        &__container
+            display: flex
+            align-items: center
+        &__card-box
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 320px
+        &__card-item
+            display: flex
+            margin-right: 0
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0px
+            width: 200px
+            height: 200px
+            border-radius: 18px
+        &__first-elipse
+            top: 435px
+            right: 15px
+    .second-section__icons-item
+        display: flex
+        flex-direction: column
+        margin-right: 20px
+    .icons_img
+        height: 40px
+        width: 40px
+        margin-right: 0px
+    .icons_text
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+    .second-section__text
+        font-size: 20px
+    .second-section__text-block
+        width: 200px
+        top: 80px
+    .third-section
+        
+        &__container
+            display: flex
+            justify-content: center
+            padding-left: 0px
+            width: 320px
+        &__left-wrapper
+            display: none
+    .third-section__right-title
+        display: flex
+        justify-content: center
+        text-align: center
+    .third-section__first-elipse 
+        display: none
+    .footer__container 
+        min-height: 130px
+        img
+            height: 140px
+            opacity: 0.3
+            z-index: 1
+        .footer__img 
+            left: -130px
+    .icons__item
+        z-index: 4
+
+        
+
+        
+
+      
+
+
 
     
     
